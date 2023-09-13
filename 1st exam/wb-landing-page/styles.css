@@ -1,0 +1,286 @@
+.primary{
+  background-color: #070439;
+  background-size: cover;
+  height: 60vh;
+  color: white;
+}
+
+.accent{
+  background-color: #585989;
+  background-size: cover;
+  height: 40vh;
+  color: white;
+}
+
+.neutral{
+  background-color: #f6f6fe;
+  background-size: cover;
+  height: 75vh;
+}
+
+.headings{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.inicio{
+  position: relative;
+  height: 60px;
+	width: 70%;
+  bottom: 30px;
+  padding-left: 1170px;
+  word-spacing: 0.5em;
+}
+
+.logo{
+  position: relative;
+  left: 190px;
+  top: 10px;
+  width: 200px;
+}
+
+.inicial{
+  position: relative;
+  left: 190px;
+  top: 125px;
+  font-size: 36px;
+  width: 600px;
+  word-spacing: .2em;
+  line-height: 1.5;
+}
+
+.tein{
+  position: relative;
+  left: 190px;
+  top: 147px;
+  font-size: 15px;
+  width: 500px;
+  word-spacing: .25em;
+  line-height: 1.5;
+}
+
+.img1{
+  position: relative;
+  left: 650px;
+  bottom: 380px;
+  width: 500px;
+}
+
+.info{
+  position: relative;
+  top: 25px;
+}
+
+.email1{
+  position: relative;
+  resize: none;
+  text-align:justify;
+}
+
+.button1 {
+  position: relative;
+  left: 375px;
+  bottom: 22px;
+  background-color: #3065F8;
+  border: none;
+  color: white;
+  padding: 11px 42px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.title2{
+  position: relative;
+  left: 190px;
+  font-size: 25px;
+  word-spacing: 4px;
+  line-height: 1.5;
+}
+
+.text2{
+  position: relative;
+  left: 190px;
+  top: 20px;
+  font-size: 12px;
+  width: 520px;
+  word-spacing: .25em;
+  line-height: 1.5;
+}
+
+.link{
+  color: green;
+  position: relative;
+  left: 190px;
+  top: 47px;
+  font-size: 13px;
+  text-decoration: underline green;
+}
+
+.img2{
+  position: relative;
+  left: 735px;
+  bottom: 145px;
+  width: 525px;
+}
+
+.box{
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.0);
+  width: 260px;
+  height: 145px;
+  position: relative;
+  left: 190px;
+  bottom: 315px;
+}
+
+.Kylo{
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  top: 10px;
+  left: 20px;
+}
+
+.text{
+  position: relative;
+  width: 225px;
+  font-size: 9px;
+  padding: 20px;
+  top: 15px;
+}
+
+.name{
+  position: relative;
+  font-size: 9px;
+  bottom: 20px;
+  left: 55px;
+}
+
+.position{
+  position: relative;
+  font-size: 7px;
+  bottom: 18px;
+  left: 55px;
+}
+
+.access{
+  position: relative;
+  font-size: 20px;
+  top: 90px;
+  left: 190px;
+}
+
+.sign{
+  position: relative;
+  left: 190px;
+  top: 110px;
+  font-size: 15px;
+  width: 465px;
+  word-spacing: .25em;
+}
+
+.email2{
+  position: relative;
+  top: 15px;
+  left: 830px;
+  resize: none;
+  text-align:justify;
+}
+
+.button2{
+  position: relative;
+  left: 470px;
+  top: 50px;
+  background-color: #3065F8;
+  border: none;
+  color: white;
+  padding: 9px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.logo2{
+  position: relative;
+  left: 190px;
+  top: 100px;
+  width: 200px;
+}
+
+.phone{
+  position: relative;
+  left: 190px;
+  top: 150px;
+}
+
+.emailref{
+  position: relative;
+  left: 190px;
+  top: 170px;
+}
+
+.us{
+  position: relative;
+  left: 500px;
+  top: 113px; 
+}
+
+.job{
+  position: relative;
+  left: 500px;
+  top: 133px; 
+}
+
+.press{
+  position: relative;
+  left: 500px;
+  top: 153px; 
+}
+
+.blog{
+  position: relative;
+  left: 500px;
+  top: 173px; 
+}
+
+.contact{
+  position: relative;
+  left: 750px;
+  top: 40px; 
+}
+
+.terms{
+  position: relative;
+  left: 750px;
+  top: 60px; 
+}
+
+.priv{
+  position: relative;
+  left: 750px;
+  top: 80px; 
+}
+
+.redes{
+  position: relative;
+  left: 1050px;
+  bottom: 10px;
+  word-spacing: 0.5em;
+
+}
