@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website - CSS</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="sticky" src="./image/cloud.png" alt="A cloud" />
+    <img class="sticky" src="./image/cloud.png" alt="A cloud" />
+    <img class="static" src="./image/mountain.png" alt="A mountain" />
+
+    <div id="header_info">
+        <!-- This is a title -->
+        <h1> Sebastián Avilez</h1>
+        <img src="./image/bird.jpg" alt="A bird" />
+        <p>
+            I am an student at UP Guadalajara. </br>
+            My address is <em>Cuidad Granja</em>, <strong> Zapopan</strong>
+        </p>
+        <blockquote>"Do or do not, ther is not try" --Yoda.</blockquote>
+
+    </div>
+    
+    <blockquote>"A" --Yoda.</blockquote>
+    <hr>
+    <div class="even">
+        <a href="destination.html" alt="Link to destinations page">My favorite places to go</a>
+        <a href="http://google.com" alt="Link to Google" target="_blank">Google</a>
+        <a href="#recent" alt="Link to my recent activities">My recent activities</a>
+        <a href="destination.html#vacation" alt="Link to vacation table">Vacation table</a>
+    </div>
+
+    <hr>
+    <div>
+        <h2>Education</h2>
+        <table border="1" id="school">
+            <thead>
+                <tr>
+                    <th>Years</th>
+                    <th>Name</th>
+                    <th>Logo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2006-2009</td>
+                    <td>Kinder Reykin</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2009-2018</td>
+                    <td>Colegio Lomas del Valle</td>
+                    <td><img class="logos" src="https://tse3.mm.bing.net/th?id=OIP.K_Q5vpLw96J9bQH2QmE4pAHaGt&pid=Api&P=0&h=180"  alt="Logo de la Lomas del Valle" width="100%" /></td>
+                </tr>
+                <tr>
+                    <td>2018-2021</td>
+                    <td>UNIVA</td>
+                    <td><img class="logos" src="https://www.univa.mx/wp-content/uploads/2018/06/top_logo_univa.png" alt="Logo de la UNIVA" width="100%" /></td>
+                </tr>
+                <tr>
+                    <td>2021-</td>
+                    <td>Universidad Panamericana</td>
+                    <td><img class="logos" src="https://www.enroll-u.com/index.php/_i/2/7/6/8c464a12-a139-11ea-b8a3-0295ecf211ad.png"  alt="Logo de la UP" width="100%" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <hr>
+    <div class="even">
+        <p>Write an ordered list of your top 5 technical skills with a percentage of mastery. 	The percentage part should be emphasize </p>
+
+        <u2>
+            <li>Java <strong>40%</strong></li>
+            <li>C <strong>40%</strong></li>
+            <li>Python <strong>30%</strong></li>
+            <li>C++ <strong>25%</strong></li>
+            <li>C# <strong>10%</strong></li>
+        </u2>
+    </div>
+    
+    <hr>
+    <div>
+        <h1>Homework</h1>
+        <p>In a list at the same level as educaTion, out of a list of 20 subjects, show 	your top 3 most liked school subjects ant the bottom 3.</p>
+    
+        <p>
+            <strong>I don´t want to know any of the subjects in between!</strong> and they 	have to be properly numbered.
+            Each with a title "Top 3" and "Bottom 3"
+        </p>
+    
+        <h2>Top 3</h2>
+        <ol>
+            <li>Digital modeling</li>
+            <li>Digital and Electrical Circuits</li>
+            <li>Videogames development</li>
+        </ol>
+    
+        <h2>Bottom 3</h2>
+        <ol start="18">
+            <li>Physical</li>
+            <li>Diferential Calculus</li>
+            <li>Chemistry</li>
+        </ol>
+    </div>
+    
+    <hr>
+    <div class="even">
+        <h3 id="recent">Hobbies</h3>
+        <ul>
+            <li>
+                <span>Movies</span>
+                <ol>
+                    <li>Lord of the Rings</li>
+                    <li>Avengers: Endgame</li>
+                    <li>Iron Man 3</li>
+                </ol>
+            </li>
+            <li>
+                Books
+                <ol type="a">
+                    <li>Ready Player One</li>
+                    <li>La ladrona de libros</li>
+                    <li>Codigo DaVinci</li>
+                </ol>
+            </li>
+            <li>
+                TV Shows
+                <ol type="I">
+                    <li>Loki</li>
+                    <li>The Rings of Power</li>
+                    <li>Gravity Falls</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    
+    <hr>
+    <div>
+        <h2>My family's birthdays</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th colspan="2">Name</th>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Last name</th>
+                    <th>Birth date</th>
+                    <th>Birth place</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>Jose</td>
+                    <td>Castillo</td>
+                    <td>March 1st</td>
+                </tr>
+                <tr>
+                    <td>Jose</td>
+                    <td>Castillo</td>
+                    <td>March 1st</td>
+                    <td>Zapopan</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>100</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <hr>
+    <div class="even">
+        <h2>Contact me</h2>
+        <form action="#" method="d">
+            <table border="1" width="60%">
+                <tbody>
+                    <tr>
+                        <td><label for="usr_name">Name</label></td>
+                        <td><input type="text" name="usr_name"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="usr_email">Email</label></td>
+                        <td><input type="email" name="usr_email"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="usr_date">Date</label></td>
+                        <td><input type="date" name="usr_date"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan ="2"><textarea id="msg">Write a message</textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan ="2"><input type="submit" value="Submit"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="heroe">
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="./image/dare.jpg" alt="Daredevil" style="width:100%">
+                <div class="container">
+                  <h2>Daredevil</h2>
+                  <p class="title">Superheroe &amp; Lawyer</p>
+                  <p>Abril 1964</p>
+                  <p>Hell's Kitchen Devil and Lawyer, Matt learned to master his senses and becomes a formidable fighter.</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="./image/iron.jpg" alt="Iron Man" style="width:100%">
+                <div class="container">
+                  <h2>Iron Man</h2>
+                  <p class="title">Superheroe</p>
+                  <p>March, 1963</p>
+                  <p>Anthony Edward Stark is Superheroe that is helping the new generation to adapt to this world </p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="./image/ant.jpg" alt="Ant Man" style="width:100%">
+                <div class="container">
+                  <h2>Ant Man</h2>
+                  <p class="title">Superheroe</p>
+                  <p>March, 1979</p>
+                  <p>Man that became a superheroe and teaches others the way of the redeption</p>
+                </div>
+              </div>
+            </div>
+    </div>
+    </div>
+    
+</body>
+</html>
