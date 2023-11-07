@@ -1,6 +1,6 @@
 <%- include("partials/header"); -%>
     <h1>Welcome to my F1 DB</h1>
-    <form action="/driver" method="get">
+    <form action="/driver" method="post">
         <h2>Driver information</h2>
         <input type="text" name="num" id="num" placeholder="Number" />
         <input type="text" name="code" id="code" placeholder="Code" />
@@ -37,7 +37,7 @@
         <label for="team">Team: </label>
         <select name="team" id="team">
             <% teams.forEach((team) => { %>
-                <option value="<%= team.value %>">
+                <option value="<%= team.code %>">
                     <%= team.name %>
                 </option>
                 <% });%>
@@ -56,4 +56,14 @@
         <p> <input type="submit" /> </p>
 
     </form>
+
+    <ul>
+        <% drivers.forEach((driver) => { %>
+            <li>
+                <%= driver.forename %> 
+                    <%= driver.surname %>
+            </li>
+        
+        <% });%>
+    </ul>
     <%- include("partials/footer"); -%>

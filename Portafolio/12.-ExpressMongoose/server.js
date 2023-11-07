@@ -2,9 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
@@ -18,9 +19,9 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 // Definition of a schema
 const teamSchema = new mongoose.Schema({
   id: Number,
+  code: String,
   name: String,
-  value: String,
-  nationality: String,
+  country: String,
   url: String,
 });
 teamSchema.set("strictQuery", true);
@@ -62,26 +63,85 @@ let teamsRaw = [
   { code: "mercedes", name: "Mercedes", country: "GER"},
   { code: "aston_martin", name: "Aston Martin", country: "ENG"},
   { code: "alpine", name: "Alpine", country: "FRA"},
+  { code: "hass_f1", name: "Hass F1 Team", country: "USA"},
+  { code: "red_bull", name: "Red Bull Racing", country: "AUS"},
+  { code: "alpha_tauri", name: "Alpha Tauri", country: "ITA"},
+  { code: "alpha_romeo", name: "Alpha Romeo", country: "ITA"},
+  { code: "ferrari", name: "Ferrari", country: "ITA"},
+  { code: "williams", name: "Williams", country: "ENG"},
+  { code: "mc_laren", name: "McLaren", country: "ENG"},
 ];
 
 let teams = [
 
 ];
 
+let drivers = [];
+
+
 app.use("/", async (req, res, next) => {
   if(teams.length == 0) {
     var team = await Team.find({}).exec();
     if(!Array.isArray(team) || team.length == 0){
-      //insert elements
+      await Team.insertMany(teamsRaw).then(() =>{
+        console.log("Data loaded");
+      }).catch((error) => {
+        console.log(error);
+      });
+    await Team.find({})
+      .then((docs) => {
+        console.log("Teams loaded");
+        teams = docs;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
     } else {
       teams = team;
     }
   }
+  next();
 });
 
 app.get("/", (req, res) => {
   // res.sendFile(__dirname + "/public/html/index.html");
-  res.render("index", {countries, teams: [{value: "NA", name: "NA" }] });
+  res.render("index", {countries, teams, drivers});
+});
+
+app.post("/driver", async(req, res) => {
+  var team = await Team.findOne({code: {$eq: req.body.team} }).exec();
+  // Method 1 - Direct model
+  // var driver = {
+  //   num: req.body.num, 
+  //   code: req.body.code, 
+  //   forename: req.body.name,
+  //   surname: req.body.lname, 
+  //   dob: req.body.dob, 
+  //   nationality: req.body.nation, 
+  //   url: req.body.url, 
+  //   team: team,
+  // }
+  // await Driver.insertOne(driver)
+  //   .then(() => {
+  //     console.log("Driver recorded");
+  // })
+  // .catch((err) => {
+  //   console.error(err);
+  // });
+  // Method 2 - Indirect model
+  var driver = new Driver({
+    num: req.body.num, 
+    code: req.body.code, 
+    forename: req.body.name,
+    surname: req.body.lname, 
+    dob: req.body.dob, 
+    nationality: req.body.nation, 
+    url: req.body.url, 
+    team: team,
+  });
+  driver.save();
+  drivers.push(driver);
+  res.redirect("/");
 });
 
 app.listen(3000, (err) => {
