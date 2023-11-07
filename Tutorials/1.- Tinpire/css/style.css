@@ -21,3 +21,8 @@
 footer{
   height: 60vh;
 }
+
+.phone{
+  padding: 5px;
+  padding-bottom: 0px;
+}
